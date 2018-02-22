@@ -24,10 +24,10 @@ def main():
     while True:
         print('GET', ns.url)
         http.request('GET', ns.url)
-        print_info(ns)
+        print_info(secs, ns)
         time.sleep(secs)
 
-def print_info(ns):
+def print_info(secs, ns):
     if ns.hours and ns.minutes and ns.seconds:
         print('sleep {0} hours {1} minutes {2} seconds...'.format(ns.hours, ns.minutes, ns.seconds))
     elif ns.hours and ns.seconds:
